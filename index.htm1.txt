@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đỗ Quang Hải - Hair & Cafe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e1e1e;
+      padding: 60px 20px 40px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #f5c542;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #bbbbbb;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .info {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .info h2 {
+      color: #f5c542;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e1e;
+      color: #777;
+    }
+
+    a {
+      color: #f5c542;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-buttons {
+      margin-top: 15px;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      background-color: #333;
+      color: #f5c542;
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .social-buttons a:hover {
+      background-color: #444;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #f5c542;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    .reviews p {
+      background: #2a2a2a;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 10px 0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Ảnh đại diện"/>
+    <h1>Đỗ Quang Hải</h1>
+    <p>Thợ tóc & Chủ Hair & Cafe</p>
+    <div class="social-buttons">
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://zalo.me" target="_blank">Zalo</a>
+    </div>
+  </header>
+
+  <section class="info">
+    <h2>Giới thiệu</h2>
+    <p><strong>Họ tên:</strong> Đỗ Quang Hải</p>
+    <p><strong>Ngày sinh:</strong> 03/02/2001</p>
+    <p><strong>Nghề nghiệp:</strong> Thợ tóc</p>
+  </section>
+
+  <section class="info">
+    <h2>Hair & Cafe</h2>
+    <p>Một không gian độc đáo kết hợp giữa làm tóc chuyên nghiệp và thưởng thức cà phê thư giãn. Nơi khách hàng vừa được chăm sóc sắc đẹp vừa được chill cùng âm nhạc và hương vị cà phê chất lượng.</p>
+  </section>
+
+  <section class="info">
+    <h2>Liên hệ</h2>
+    <p>Email: <a href="mailto:doquanghai1991st@gmail.com">doquanghai1991st@gmail.com</a></p>
+  </section>
+
+  <section class="info">
+    <h2>Đặt lịch hẹn</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Họ và tên" required />
+      <input type="tel" placeholder="Số điện thoại" required />
+      <input type="datetime-local" required />
+      <textarea rows="3" placeholder="Ghi chú (tuỳ chọn)"></textarea>
+      <button type="submit">Gửi yêu cầu</button>
+    </form>
+  </section>
+
+  <section class="info reviews">
+    <h2>Đánh giá khách hàng</h2>
+    <p>⭐️⭐️⭐️⭐️⭐️ “Không gian cực chill, tóc làm đẹp như poster!” – Linh Nguyễn</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ “Mình đi làm tóc mà cứ như đang đi uống cà phê thư giãn.” – Trọng Nam</p>
+    <p>⭐️⭐️⭐️⭐️ “Quán thiết kế đẹp, phục vụ rất nhiệt tình!” – Huyền Trang</p>
+  </section>
+
+  <section class="info map">
+    <h2>Địa chỉ & Bản đồ</h2>
+    <p>Số 123 Đường ABC, Sơn Tây, Hà Nội</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.236454570673!2d105.76123131529568!3d21.028511393157156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134555e4b86e415%3A0x4a8b4c8538dfd43d!2zU8ahbiBUw6J5LCBIw6AgTuG7mWkgVGjDoG5oIHBo4buRIFTDom4!5e0!3m2!1svi!2s!4v1628224165559!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="info">
+    <h2>Bảng giá dịch vụ</h2>
+    <p>Bạn có thể tải bảng giá chi tiết tại đây:</p>
+    <a href="banggia.pdf" download><button>Tải bảng giá (PDF)</button></a>
+  </section>
+
+  <footer>
+    &copy; 2025 Đỗ Quang Hải. All rights reserved.
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Cảm ơn bạn đã đặt lịch! Chúng tôi sẽ liên hệ sớm.");
+    }
+  </script>
+
+</body>
+</html>
